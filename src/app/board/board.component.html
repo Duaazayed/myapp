@@ -11,8 +11,12 @@
 <main>
     <app-square 
         *ngFor="let val of squares; let i = index" 
-        [value]="val"
+        enum val{
+            X,
+            O
+        }
+        [value]= "val" 
         (click)="makeMove(i)"> 
 
     </app-square>
-</main>                   
+</main>
